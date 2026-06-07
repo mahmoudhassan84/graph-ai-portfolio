@@ -539,6 +539,48 @@
     .capstone h3 { font-size: 1.55rem; margin-bottom: 6px; }
     .capstone p { color: rgba(255,255,255,0.82); }
 
+    .consultation-wrap {
+      display: grid;
+      grid-template-columns: minmax(0, 0.78fr) minmax(0, 1.22fr);
+      gap: 28px;
+      align-items: start;
+    }
+
+    .consultation-intro {
+      background: var(--deep-blue);
+      color: #ffffff;
+      padding: 32px;
+      border-left: 8px solid var(--gold);
+      box-shadow: var(--shadow);
+    }
+
+    .consultation-intro h3 {
+      font-size: 1.65rem;
+      line-height: 1.12;
+      margin-bottom: 14px;
+    }
+
+    .consultation-intro p {
+      color: rgba(255,255,255,0.84);
+      margin-bottom: 14px;
+    }
+
+    .consultation-intro p:last-child { margin-bottom: 0; }
+
+    .consultation-form-card {
+      background: #ffffff;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .consultation-form-card iframe {
+      display: block;
+      width: 100%;
+      min-height: 778px;
+      border: 0;
+    }
+
     .footer {
       background: var(--deep-blue);
       color: #ffffff;
@@ -562,7 +604,7 @@
     .top-link { background: var(--gold); color: #071d38 !important; padding: 10px 14px; border-radius: 4px; font-weight: 900; }
 
     @media (max-width: 1000px) {
-      .hero-inner, .course-layout { grid-template-columns: 1fr; }
+      .hero-inner, .course-layout, .consultation-wrap { grid-template-columns: 1fr; }
       .news-grid { grid-template-columns: 1fr 1fr; }
       .news-card.large { grid-column: 1 / -1; }
       .about-grid, .submissions, .modules { grid-template-columns: repeat(2, 1fr); }
@@ -618,6 +660,7 @@
         <a href="#course">Course ▾</a>
         <a href="#updates">Latest updates ▾</a>
         <a href="#submissions">Submissions ▾</a>
+        <a href="#consultation">Consultation ▾</a>
         <a href="#footer">About this site ▾</a>
       </div>
     </nav>
@@ -779,13 +822,35 @@
         </div>
       </div>
     </section>
+
+    <section id="consultation" class="section page" aria-label="Contact for Consultation">
+      <div class="section-heading">
+        <div>
+          <div class="section-label">Contact for Consultation</div>
+          <h2>Request a consultation.</h2>
+        </div>
+        <p>Please use the form below to share your consultation request, area of interest, and preferred contact details.</p>
+      </div>
+
+      <div class="consultation-wrap">
+        <aside class="consultation-intro">
+          <h3>Public health analytics, surveillance, and responsible AI workflows</h3>
+          <p>This form can be used to request a consultation related to epidemiological analytics, data management, dashboards, surveillance systems, capacity building, or practical use of generative AI in work and research.</p>
+          <p>Please provide enough context to support an initial review of your request.</p>
+        </aside>
+
+        <div class="consultation-form-card">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeLkAput2serFH93c4lQ3l9C18avQCfgJVBL0w31rXAbjUPdQ/viewform?embedded=true" width="640" height="778" frameborder="0" marginheight="0" marginwidth="0" title="Contact for Consultation form">Loading…</iframe>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="footer" class="footer">
     <div class="footer-grid">
       <div>
         <h3>Dr. Mahmoud Hassan</h3>
-        <p>Generative AI for Work & Research portfolio. Contact details are intentionally omitted from this public page.</p>
+        <p>Generative AI for Work & Research portfolio. Consultation requests can be submitted through the contact form.</p>
       </div>
       <div>
         <h4>Portfolio</h4>
@@ -793,6 +858,7 @@
           <li><a href="#about">About me</a></li>
           <li><a href="#course">About the course</a></li>
           <li><a href="#submissions">Weekly submissions</a></li>
+          <li><a href="#consultation">Contact for consultation</a></li>
         </ul>
       </div>
       <div>
